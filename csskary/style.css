@@ -1,19 +1,35 @@
-:root {
-  --penguin-size: 300px;
-  --penguin-skin: gray;
-  --penguin-belly: white;
-  --penguin-beak: orange;
-}
+@import url("https://fonts.googleapis.com/css?family=Lobster");
 
 @media (max-width: 425px) {
   :root {
     --penguin-size: 200px;
-    --penguin-skin: black;
   }
+
+  #kary {
+    font-size: .6rem;
+    margin-bottom: -.5rem
+  }
+}
+
+:root {
+  --penguin-size: 300px;
+  --penguin-skin: black;
+  --penguin-belly: white;
+  --penguin-beak: orange;
 }
 
 .sombra {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#kary {
+  font-family: "Lobster";
+  font-weight: lighter;
+  text-transform: capitalize;
+  padding: 1rem;
+  border-radius: 5em;
+  background: linear-gradient(90deg, cyan, yellow, cyan);
+  text-align: center;
 }
 
 .penguin {
@@ -83,7 +99,7 @@
   animation-name: wave;
   animation-iteration-count: infinite;
   transform-origin: 0% 0%;
-  animation-timing-function: linear;
+  animation-timing-function: cubic-bezier(1);
 }
 
 @keyframes wave {
@@ -206,4 +222,10 @@ body {
 
 .penguin * {
   position: absolute;
+}
+
+@media (max-width: 425px) {
+  :root {
+    --penguin-size: 200px;
+  }
 }
